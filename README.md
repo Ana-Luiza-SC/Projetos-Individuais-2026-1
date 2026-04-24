@@ -21,10 +21,11 @@ Projetos-Individuais-2026-1/
 └── ...
 ```
 
-## Projetos
+## Projetos de Machine Learning
 
 | # | Projeto | Descrição |
 |---|---------|-----------|
+| 0 | [Repositório de Projetos Individual](ingrid-soares/) | Todos os projetos da Disciplina Machine Learning por Ingrid Soares |
 | 1 | [Agente de IA Orientado a Problema](projeto-individual-1/) | Projetar e implementar um agente de IA funcional com foco em requisitos, arquitetura e implementação |
 | 2 | [Sistema de ML com MLflow](projeto-individual-2/) | Desenvolver um sistema de ML end-to-end com MLflow para rastreamento, versionamento, deploy e observabilidade |
 | 3 | [Automação com n8n e Agentes de IA](projeto-individual-3/) | Projetar e implementar um fluxo automatizado com n8n, integrando agentes de IA para decisão e orquestração |
@@ -140,3 +141,4 @@ to reproduce results and compare model versions.
 - PR gigante sem explicação
 
 > **Regra de ouro:** Um bom PR permite que alguém revise **sem precisar abrir o código inteiro**.
+
