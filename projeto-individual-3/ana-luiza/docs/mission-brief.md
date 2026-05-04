@@ -96,7 +96,7 @@ esforço da triagem inicial para que o pesquisador foque onde importa.
 
 | # | Critério | Como verificar |
 |---|---|---|
-| CA-01 | O agente gera uma query coerente com o objetivo informado | Comparar objetivo vs query no log do nó OpenAI |
+| CA-01 | O agente gera uma query coerente com o objetivo informado | Comparar objetivo vs query no log do nó Google Gemini |
 | CA-02 | A Semantic Scholar retorna ao menos 3 artigos por busca | Verificar output do nó HTTP Request |
 | CA-03 | Cada artigo recebe classificação, score, keywords e justificativa | Verificar JSON retornado pelo nó de classificação |
 | CA-04 | Artigos `neutro` ou confiança < 0.6 geram linha com status `revisao_humana` no Sheets | Verificar planilha após execução com artigo ambíguo |
@@ -114,7 +114,7 @@ esforço da triagem inicial para que o pesquisador foque onde importa.
 | IA retorna JSON malformado | Média | Alto | Nó Code com try/catch — fallback para `revisao_humana` |
 | Query gerada pelo agente é genérica demais | Média | Médio | Prompt do Agente 1 instrui a usar termos técnicos em inglês |
 | Artigos retornados são irrelevantes ao tema | Média | Médio | Score de confiança baixo aciona revisão humana automaticamente |
-| Limite de tokens da API OpenAI | Baixa | Baixo | Abstracts truncados a 500 caracteres antes de enviar |
+| Limite de tokens da API Google Gemini | Baixa | Baixo | Abstracts truncados a 500 caracteres antes de enviar |
 
 ---
 

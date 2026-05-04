@@ -27,7 +27,7 @@
 | Ferramenta | Finalidade | Restrições |
 |---|---|---|
 | **Semantic Scholar API** | Busca de artigos científicos por query textual | Máximo 10 resultados por chamada; somente artigos com acesso público |
-| **OpenAI GPT-4o-mini** | Geração de query (Agente 1) e classificação/extração (Agente 2) | Abstracts truncados a 500 caracteres; temperatura = 0.2 para respostas determinísticas |
+| **Google Gemini (gemini-2.0-flash)** | Geração de query (Agente 1) e classificação/extração (Agente 2) | Abstracts truncados a 500 caracteres; temperatura = 0.2 para respostas determinísticas |
 | **Google Sheets** | Registro persistente de todos os artigos processados | Somente escrita — o agente não lê histórico de execuções anteriores |
 | **Telegram Bot API** | Notificação ao pesquisador para artigos de alta relevância | Disparado apenas quando `classificacao = alta_relevancia` |
 

@@ -87,7 +87,7 @@ Foram propostas três soluções para o pipeline de curadoria:
 
 #### Solução A — Script Python Autônomo
 
-**Descrição:** Pipeline implementado como script Python com chamadas diretas às APIs (Semantic Scholar + OpenAI), saída em CSV local.
+**Descrição:** Pipeline implementado como script Python com chamadas diretas às APIs (Semantic Scholar + Google Gemini), saída em CSV local.
 
 | Atributo | Detalhe |
 |---|---|
@@ -102,13 +102,13 @@ Foram propostas três soluções para o pipeline de curadoria:
 
 ---
 
-#### Solução B — Pipeline n8n com Dois Agentes OpenAI
+#### Solução B — Pipeline n8n com Dois Agentes Google Gemini
 
-**Descrição:** Pipeline visual no n8n com dois nós de agente OpenAI (Query Builder + Classifier), integrado à Semantic Scholar via HTTP Request, Google Sheets via nó nativo e Telegram Bot.
+**Descrição:** Pipeline visual no n8n com dois nós de agente Google Gemini (Query Builder + Classifier), integrado à Semantic Scholar via HTTP Request, Google Sheets via nó nativo e Telegram Bot.
 
 | Atributo | Detalhe |
 |---|---|
-| Tecnologia | n8n (self-hosted ou cloud), OpenAI GPT-4o-mini, Semantic Scholar API |
+| Tecnologia | n8n (self-hosted ou cloud), Google Gemini (gemini-2.0-flash), Semantic Scholar API |
 | Orquestração | Fluxo visual com nós encadeados |
 | Armazenamento | Google Sheets (nó nativo do n8n) |
 | Notificação | Telegram Bot (nó nativo do n8n) |
@@ -125,7 +125,7 @@ Foram propostas três soluções para o pipeline de curadoria:
 
 | Atributo | Detalhe |
 |---|---|
-| Tecnologia | Python, LangChain, OpenAI, Google Sheets API |
+| Tecnologia | Python, LangChain, Google Gemini, Google Sheets API |
 | Orquestração | Loop ReAct: raciocínio → ação → observação |
 | Armazenamento | Google Sheets via API Python |
 | Notificação | Telegram via `python-telegram-bot` |
@@ -183,7 +183,7 @@ Para cada solução, implementar um **protótipo mínimo funcional** que cubra o
 | Solução | Protótipo mínimo | Critério de viabilidade |
 |---|---|---|
 | **A** | Script `main.py` com função `buscar_e_classificar(objetivo)` que retorna dict | Executar sem exceção com input fixo |
-| **B** | Workflow n8n com 5 nós: Trigger → HTTP Semantic Scholar → OpenAI Classifier → Google Sheets → Telegram | Executar execução completa com um objetivo de teste |
+| **B** | Workflow n8n com 5 nós: Trigger → HTTP Semantic Scholar → Google Gemini Classifier → Google Sheets → Telegram | Executar execução completa com um objetivo de teste |
 | **C** | Agente LangChain com 3 ferramentas registradas: `search`, `classify`, `register` | Completar loop ReAct em menos de 3 iterações |
 
 **Definição de "mínimo":** o protótipo precisa demonstrar que a abordagem funciona — não precisa tratar erros, fallback ou formatação de planilha. Isso vem nos testes.
@@ -270,7 +270,7 @@ Declarar formalmente a solução escolhida, com justificativa baseada na compara
 
 ### O que foi feito neste projeto
 
-**Solução escolhida: B — Pipeline n8n com Dois Agentes OpenAI**
+**Solução escolhida: B — Pipeline n8n com Dois Agentes Google Gemini**
 
 **Justificativa:**
 

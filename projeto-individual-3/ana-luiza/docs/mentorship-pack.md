@@ -32,7 +32,7 @@ Exemplos de alternativas que devem ser documentadas:
 
 | Decisão | Alternativa descartada | Motivo do descarte |
 |---|---|---|
-| Usar GPT-4o-mini | GPT-4o (versão maior) | Custo por token 10x maior sem ganho mensurável de qualidade para abstracts curtos |
+| Usar Google Gemini (gemini-2.0-flash) | Gemini Pro (versão maior) | Custo por token mais alto sem ganho mensurável de qualidade para abstracts curtos |
 | Registro em Google Sheets | Banco de dados PostgreSQL | Overhead de infraestrutura desnecessário para volume < 100 registros/dia |
 | Limite de 10 artigos por busca | Busca paginada com múltiplas chamadas | Aumentaria latência e risco de rate limit sem benefício validado |
 | Pipeline no n8n | Script Python autônomo | n8n permite rastreabilidade visual de cada etapa e facilita depuração sem código |
